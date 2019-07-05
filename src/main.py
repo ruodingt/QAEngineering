@@ -25,12 +25,12 @@ import tensorflow as tf
 from data_pipeline.input_features import convert_examples_to_features, FeatureWriter
 from data_pipeline.predict import write_predictions
 from data_pipeline.squad_example import read_squad_examples
-from modeling.run_squad import model_fn_builder, input_fn_builder, RawResult
+from modeling.estimator_components import model_fn_builder, input_fn_builder, RawResult
 
 from reference.bert import tokenization
 from reference.bert.modeling import BertConfig
 
-from modeling.flag import FLAGS, flags
+from param.flag import FLAGS, flags
 
 
 def validate_flags_or_throw(bert_config):

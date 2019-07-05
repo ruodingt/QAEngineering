@@ -103,5 +103,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-reference
-/reference
+# reference
+reference/
+
+# key
+key/

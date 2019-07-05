@@ -5,7 +5,7 @@ from __future__ import print_function
 import json
 import tensorflow as tf
 
-from modeling.flag import FLAGS
+from param.flag import FLAGS
 from reference.bert import tokenization
 
 

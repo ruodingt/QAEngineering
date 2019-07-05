@@ -8,7 +8,6 @@ import math
 import six
 import tensorflow as tf
 
-from modeling.flag import FLAGS
 from reference.bert import tokenization
 
 
