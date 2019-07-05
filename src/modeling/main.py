@@ -33,7 +33,6 @@ from reference.bert.modeling import BertConfig
 from modeling.flag import FLAGS, flags
 
 
-
 def validate_flags_or_throw(bert_config):
     """Validate the input FLAGS or throw an exception."""
     tokenization.validate_case_matches_checkpoint(FLAGS.do_lower_case,

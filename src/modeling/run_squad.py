@@ -62,7 +62,7 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
 
     (start_logits, end_logits) = (unstacked_logits[0], unstacked_logits[1])
 
-    return (start_logits, end_logits)
+    return start_logits, end_logits
 
 
 def model_fn_builder(bert_config, init_checkpoint, learning_rate,
@@ -117,7 +117,7 @@ def model_fn_builder(bert_config, init_checkpoint, learning_rate,
             tf.logging.info("  name = %s, shape = %s%s", var.name, var.shape,
                             init_string)
 
-        output_spec = None
+        # output_spec = None
         if mode == tf.estimator.ModeKeys.TRAIN:
             seq_length = get_shape_list(input_ids)[1]
 
