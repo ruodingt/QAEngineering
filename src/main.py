@@ -21,11 +21,14 @@ from __future__ import print_function
 import os
 import random
 import tensorflow as tf
+import sys
+sys.path.append(os.path.dirname((os.path.dirname(__file__))))
 
 from data_pipeline.input_features import convert_examples_to_features, FeatureWriter
 from data_pipeline.predict import write_predictions
 from data_pipeline.squad_example import read_squad_examples
 from modeling.estimator_components import model_fn_builder, input_fn_builder, RawResult
+
 
 from reference.bert import tokenization
 from reference.bert.modeling import BertConfig

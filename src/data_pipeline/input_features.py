@@ -4,9 +4,10 @@ from __future__ import division
 from __future__ import print_function
 
 import collections
-from reference.bert import tokenization
 import six
 import tensorflow as tf
+
+from reference.bert import tokenization
 
 
 class InputFeatures(object):
