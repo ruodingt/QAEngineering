@@ -29,7 +29,7 @@ python src/main.py \
   --doc_stride=40 \
   --output_dir=/tmp/squad_base/
   
- python run_squad.py   --vocab_file=$BERT_BASE_DIR/vocab.txt \
+python src/run_squad.py   --vocab_file=$BERT_BASE_DIR/vocab.txt \
   --bert_config_file=$BERT_BASE_DIR/bert_config.json \
   --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt \
   --do_train=True \

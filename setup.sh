@@ -1,5 +1,5 @@
 
-apt install git
+apt install git -y
 
 export REFERENCE_DIR=reference
 
@@ -32,3 +32,4 @@ echo $PYTHONPATH
 echo $BERT_BASE_DIR
 echo $SQUAD_DIR
 
+cd ..

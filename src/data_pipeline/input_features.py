@@ -161,7 +161,7 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
                 start_position = 0
                 end_position = 0
 
-            if example_index < 20:
+            if example_index < 10:
                 tf.logging.info("*** Example ***")
                 tf.logging.info("unique_id: %s" % unique_id)
                 tf.logging.info("example_index: %s" % example_index)
@@ -186,6 +186,9 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
                     tf.logging.info("end_position: %d" % end_position)
                     tf.logging.info(
                         "answer: %s" % (tokenization.printable_text(answer_text)))
+
+            if example_index % 100 == 0:
+                print("progress:", 100)
 
             feature = InputFeatures(
                 unique_id=unique_id,

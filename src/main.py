@@ -141,6 +141,8 @@ def main(_):
             is_training=True,
             output_fn=train_writer.process_feature)
         train_writer.close()
+        print("finish writing feature train")
+
 
         tf.logging.info("***** Running training *****")
         tf.logging.info("  Num orig examples = %d", len(train_examples))
@@ -148,6 +150,7 @@ def main(_):
         tf.logging.info("  Batch size = %d", FLAGS.train_batch_size)
         tf.logging.info("  Num steps = %d", num_train_steps)
         del train_examples
+        exit()
 
         train_input_fn = input_fn_builder(
             input_file=train_writer.filename,
