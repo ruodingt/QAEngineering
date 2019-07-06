@@ -1,5 +1,10 @@
+
+apt install git
+
 export REFERENCE_DIR=reference
+
 mkdir -p $REFERENCE_DIR
+
 cd $REFERENCE_DIR && git clone https://github.com/google-research/bert.git
 
 mkdir -p model
@@ -18,6 +23,11 @@ export SQUAD_DIR=$REFERENCE_DIR/$SQUAD1_PATH
 PYTHONPATH=$PYTHONPATH:$PWD/$REFERENCE_DIR
 PYTHONPATH=$PYTHONPATH:$PWD/$REFERENCE_DIR/bert
 PYTHONPATH=$PYTHONPATH:$PWD
+
+
+export PYTHONPATH=$PYTHONPATH
+
+
 echo $PYTHONPATH
 echo $BERT_BASE_DIR
 echo $SQUAD_DIR

@@ -20,7 +20,7 @@ from __future__ import print_function
 
 import collections
 
-from modeling.load_bert import create_bert_model
+from models.load_bert import create_bert_model
 from reference.bert import optimization
 import tensorflow as tf
 

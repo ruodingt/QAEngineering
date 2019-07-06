@@ -10,6 +10,8 @@ import tensorflow as tf
 
 from reference.bert import tokenization
 
+from param.flag import FLAGS
+
 
 def write_predictions(all_examples, all_features, all_results, n_best_size,
                       max_answer_length, do_lower_case, output_prediction_file,

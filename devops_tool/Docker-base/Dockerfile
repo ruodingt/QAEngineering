@@ -21,3 +21,4 @@ CMD ["/usr/sbin/sshd", "-D"]
 
 # docker build Docker --build-arg user=root --build-arg password=makefog -t aia:std-ssh
 # docker run -it --rm --runtime=nvidia -p 6022:22 -p 6006:6006 -p 8888:8888 -d aia:std-ssh
+

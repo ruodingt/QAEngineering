@@ -27,7 +27,7 @@ sys.path.append(os.path.dirname((os.path.dirname(__file__))))
 from data_pipeline.input_features import convert_examples_to_features, FeatureWriter
 from data_pipeline.predict import write_predictions
 from data_pipeline.squad_example import read_squad_examples
-from modeling.estimator_components import model_fn_builder, input_fn_builder, RawResult
+from models.estimator_components import model_fn_builder, input_fn_builder, RawResult
 
 
 from reference.bert import tokenization
@@ -219,7 +219,7 @@ def main(_):
 
 
 if __name__ == "__main__":
-    # flags.mark_flag_as_required("vocab_file")
-    # flags.mark_flag_as_required("bert_config_file")
-    # flags.mark_flag_as_required("output_dir")
+    flags.mark_flag_as_required("vocab_file")
+    flags.mark_flag_as_required("bert_config_file")
+    flags.mark_flag_as_required("output_dir")
     tf.app.run()

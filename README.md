@@ -8,7 +8,7 @@ docker run -it --rm --runtime=nvidia -p 6022:22 -p 6006:6006 -p 8888:8888 -d aia
 
 In project root directory (Inside Docker):
 ```
-sh setup.sh
+. setup.sh
 ``` 
 
 ### start training:
